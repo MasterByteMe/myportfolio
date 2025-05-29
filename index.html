@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Toggle</title>
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- fontawesome link CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[var(--bg-color)] text-[var(--text-color)] font-sans">
+    <div class="sticky top-0 z-50 relative text-base text-gray-500">
+      <!-- Navbar -->
+      <nav
+        id="home"
+        class="transition-transform duration-300 transform show-nav flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 font-medium z-50 bg-white/80 backdrop-blur-md"
+      >
+        <!-- Logo -->
+         <a href="#">
+        <h1 class="text-2xl text-indigo-500 hover:text-indigo-500 font-bold cursor-pointer">mark.devz</h1>
+        </a>
+
+        <!-- Hamburger (Mobile) -->
+
+        <button
+          id="menu-toggle"
+          class="md:hidden text-gray-700 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!-- Nav Links -->
+        <ul
+          id="nav-menu"
+          class="hidden max-md:absolute top-full left-0 max-md:w-full md:flex md:items-center gap-8 max-md:bg-white max-md:shadow-md max-md:px-8 max-md:py-4 flex-col md:flex-row z-50"
+        >
+          <li>
+            <a
+              class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition"
+              href="#"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition"
+              href="#about"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition"
+              href="#services"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition"
+              href="#projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition"
+              href="#contact"
+              >Contact</a
+            >
+          </li>
+
+          <!-- Contact button for mobile -->
+          <li class="block md:hidden mt-4">
+            <button class="group flex items-center gap-2">
+              Let's Talk
+              <svg
+                class="group-hover:translate-x-1 transition pt-0.5"
+                width="12"
+                height="9"
+                viewBox="0 0 12 9"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 4.5h10.182m-4-3.5 4 3.5-4 3.5"
+                  stroke="#6B7280"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </li>
+        </ul>
+
+        <!-- Contact button for desktop -->
+
+        <div class="hidden md:flex items-center gap-4">
+          <a href="#contact">
+          <button class="group hidden md:flex items-center gap-2">
+            Let's Talk
+            <svg
+              class="group-hover:translate-x-1 transition pt-0.5"
+              width="12"
+              height="9"
+              viewBox="0 0 12 9"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 4.5h10.182m-4-3.5 4 3.5-4 3.5"
+                stroke="#6B7280"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <div
+      class="h-[580px] flex flex-col items-center justify-center px-4 text-center relative"
+    >
+      <img
+        src="./assets/images/img/photo.png"
+        alt="photo-circle"
+        class="w-40 h-40 object-cover rounded-full shadow-2xl"
+      />
+
+      <h3 class="text-2xl sm:text-3xl md:text-4xl py-4 gap-4 tracking-wide">
+        Hi I'm Mark Anthony Ruiz 👋
+      </h3>
+      <h1
+        class="text-4xl sm:text-5xl md:text-6xl font-bold max-w-4xl text-gray-800"
+      >
+        Full Stack Web Developer based in PH.
+      </h1>
+      <p class="text-lg max-w-xl text-center mt-6 px-4">
+        "I design and build full stack web apps that solve real problems. Dive
+        into my portfolio and let’s chat about your next project!"
+      </p>
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6"
+      >
+      <a href="#contact">
+        <button
+          class="px-7 py-3 rounded bg-indigo-500 hover:bg-indigo-600 text-white font-medium"
+        >
+          Contact Me
+        </button>
+        </a>
+        <button class="group px-7 py-2.5 flex items-center gap-2 font-medium">
+          My Resume
+          <svg
+            class="group-hover:translate-x-1 transition pt-0.5"
+            width="12"
+            height="9"
+            viewBox="0 0 12 9"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 4.5h10.182m-4-3.5 4 3.5-4 3.5"
+              stroke="#6B7280"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div id="about" class="overflow-hidden bg-white py-24 sm:py-32">
+      <div class="items-center justify-center text-center pb-10">
+        <h1
+          class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+        >
+          About Me
+        </h1>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div
+          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+        >
+          <div class="lg:pt-4 lg:pr-8">
+            <div class="lg:max-w-lg">
+              <p class="text-lg/8 text-gray-600">
+                Hi, I'm Mark Anthony — a self-taught Full Stack Developer driven by curiosity, creativity, and a genuine passion for building things that work beautifully. My journey into tech began with Udemy courses and YouTube tutorials, and over time, I’ve gained strong hands-on experience in both front-end and back-end technologies.
+
+                Before transitioning into web development, I worked for eight years as an Admin/Receiver at Alshaya Group in Doha, Qatar, and also gained valuable experience in customer service. These roles taught me the importance of organization, communication, and delivering results — skills I now bring to every development project I undertake.
+
+                As a career shifter, I’m eager to prove myself in the tech industry. I specialize in creating seamless user experiences, responsive layouts, and clean, maintainable code. Whether you're a business looking to build your online presence, a startup with a bold idea, or simply need help improving your existing site — I’m here to help bring your vision to life through thoughtful, functional web applications.
+              </p>
+              <dl
+                class="mt-4 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none"
+              >
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <i
+                      class="absolute top-1 left-1 size-5 text-indigo-600 fa-solid fa-graduation-cap"
+                    ></i>
+
+                    Education
+                  </dt>
+                  <dd>Bachelor of Science in Information Technology</dd>
+                </div>
+                <div class="relative pl-9">
+                  <dt class="inline font-semibold text-gray-900">
+                    <i
+                      class="absolute top-1 left-1 size-5 text-indigo-600 fa-solid fa-gear"
+                    ></i>
+                    Skills
+                  </dt>
+                  <dd>
+                    Adaptability, Leadership, Communication, Problem-Solving,
+                    Critical Thinking, Collaboration, Inventory Management
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <img
+            src="./assets/images/img/prof-img.png"
+            alt="prof-image"
+            class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-300 md:-ml-4 lg:-ml-0"
+            width="530"
+            height="1000"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center justify-center text-center">
+      <div>
+        <h1
+          class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+        >
+          The Tech I Use to Build Cool Stuff
+        </h1>
+      </div>
+
+      <div class="mt-10">
+        <p
+          class="text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-2xl pb-4"
+        >
+          Front-End
+        </p>
+        <ul
+          class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-6 gap-4 place-items-center"
+        >
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/logo-html5.png"
+              alt="html"
+            />
+          </li>
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/logo-css3.png"
+              alt="css"
+            />
+          </li>
+          <li>
+            <img class="w-20" src="./assets/images/img/logo-js.png" alt="js" />
+          </li>
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/logo-react.png"
+              alt="react"
+            />
+          </li>
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/logo-bs.png"
+              alt="bootstrap"
+            />
+          </li>
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/tailwindcss.png"
+              alt="tailwindcss"
+            />
+          </li>
+        </ul>
+      </div>
+
+      <!-- Back End Section -->
+      <div class="mt-10">
+        <p
+          class="text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-2xl pb-4"
+        >
+          Back-End
+        </p>
+        <ul
+          class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-6 gap-6 place-items-center"
+        >
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/logo-ejs.png"
+              alt="express"
+            />
+          </li>
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/logo-nodejs.png"
+              alt="nodejs"
+            />
+          </li>
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/logo-mongodb.png"
+              alt="mongodb"
+            />
+          </li>
+          <li>
+            <img class="w-20" src="./assets/images/img/mysql.png" alt="mysql" />
+          </li>
+          <li>
+            <img class="w-20" src="./assets/images/img/php.png" alt="php" />
+          </li>
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/nextjs.png"
+              alt="nexjs"
+            />
+          </li>
+        </ul>
+      </div>
+
+      <!-- Other Tools Section -->
+      <div class="mt-10">
+        <p
+          class="text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-2xl pb-4"
+        >
+          Other Tools
+        </p>
+        <ul
+          class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-6 gap-6 place-items-center"
+        >
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/logo-git.png"
+              alt="git"
+            />
+          </li>
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/logo-gitlab-ci-cd.png"
+              alt="nodejs"
+            />
+          </li>
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/logo-rest.png"
+              alt="rest"
+            />
+          </li>
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/logo-postman.png"
+              alt="postman"
+            />
+          </li>
+          <li>
+            <img
+              class="w-20"
+              src="./assets/images/img/vscode.png"
+              alt="vscode"
+            />
+          </li>
+          <li>
+            <img class="w-20" src="./assets/images/img/figma.png" alt="figma" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- services section -->
+    <div
+      id="services"
+      class="flex flex-col justify-center items-center min-h-screen my-24 px-4"
+    >
+      <h1
+        class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl pb-10"
+      >
+        Services
+      </h1>
+
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Article -->
+        <article
+          class="bg-white rounded-lg shadow overflow-hidden transition duration-300 hover:shadow-2xl"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&auto=format&fit=crop&w=3603&q=80"
+            alt=""
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3
+              class="mt-4 text-lg font-semibold text-gray-900 hover:text-blue-600"
+            >
+              <a href="#">Custom Web Development</a>
+            </h3>
+            <p class="text-sm">
+              build tailor-made websites and web applications designed
+              specifically for your business needs. From responsive design to
+              robust backend systems, our solutions are scalable, secure, and
+              built to deliver a seamless user experience.
+            </p>
+          </div>
+        </article>
+
+        <!-- Article -->
+        <article
+          class="bg-white rounded-lg shadow overflow-hidden transition duration-300 hover:shadow-2xl"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-4.0.3&auto=format&fit=crop&w=3270&q=80"
+            alt=""
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3
+              class="mt-4 text-lg font-semibold text-gray-900 hover:text-blue-600"
+            >
+              <a href="#">UI/UX Modern Design</a>
+            </h3>
+            <p class="text-sm">
+              design clean, modern user interfaces that are both visually
+              appealing and easy to navigate. By focusing on user experience and
+              functionality, I create designs that not only look great but also
+              solve real problems—making products more intuitive, engaging, and
+              effective.
+            </p>
+          </div>
+        </article>
+
+        <!-- Article -->
+        <article
+          class="bg-white rounded-lg shadow overflow-hidden transition duration-300 hover:shadow-2xl"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-4.0.3&auto=format&fit=crop&w=3270&q=80"
+            alt=""
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-6">
+            <h3
+              class="mt-4 text-lg font-semibold text-gray-900 hover:text-blue-600"
+            >
+              <a href="#">Web App and Database Management</a>
+            </h3>
+            <p class="text-sm">
+              design clean, modern user interfaces that are both visually
+              appealing and easy to navigate. By focusing on user experience and
+              functionality, I create designs that not only look great but also
+              solve real problems—making products more intuitive, engaging, and
+              effective.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div
+      id="projects"
+      class="flex flex-col justify-center items-center min-h-screen my-32 px-4"
+    >
+      <h1
+        class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl pb-10"
+      >
+        My Latest Work
+      </h1>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-screen-lg"
+      >
+        <!-- Card 1 -->
+        <a
+          href="https://masterbyteme.github.io/Coffee_Shop---Landing-Page/" target="_blank"
+          class="card group relative block bg-black rounded-lg overflow-hidden w-full mx-auto"
+        >
+          <img
+            alt="coffee-shop"
+            src="./assets/images/img/coffee-shop.jpg"
+            class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+          />
+          <div class="relative p-4 sm:p-6 lg:p-8">
+            <ul>
+              <li><img src="./assets/images/img/" alt="" /></li>
+            </ul>
+
+            <ul class="flex flex-row items-start">
+              <li>
+                <img
+                  src="./assets/images/img/logo-html5.png"
+                  alt="html"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-css3.png"
+                  alt="css"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-js.png "
+                  alt="JavaScript"
+                  class="w-8"
+                />
+              </li>
+            </ul>
+            <p class="text-xl font-bold text-indigo-600 sm:text-2xl">
+              Coffee App
+            </p>
+            <div class="mt-32 sm:mt-48 lg:mt-64">
+              <div
+                class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+              >
+                <p class="text-sm text-white tracking-wider">
+                  This project is a fully responsive coffee shop landing page
+                  built using HTML, CSS, and JavaScript, featuring a clean
+                  layout, smooth user experience, and a design that captures the
+                  warm, inviting atmosphere of a modern café.
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a
+          href="https://masterbyteme.github.io/hotelapp/" target="_blank"
+          class="card group relative block bg-black rounded-lg overflow-hidden w-full mx-auto"
+        >
+          <img
+            alt="hotel-app"
+            src="./assets/images/img/hotel-app.png"
+            class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+          />
+          <div class="relative p-4 sm:p-6 lg:p-8">
+            <ul class="flex flex-row items-start">
+              <li>
+                <img
+                  src="./assets/images/img/logo-html5.png"
+                  alt="html"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-css3.png"
+                  alt="css"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-js.png "
+                  alt="JavaScript"
+                  class="w-8"
+                />
+              </li>
+            </ul>
+            <p class="text-xl font-bold text-indigo-600 sm:text-2xl">
+              Hotel App
+            </p>
+            <div class="mt-32 sm:mt-48 lg:mt-64">
+              <div
+                class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+              >
+                <p class="text-sm text-white tracking-wider">
+                  A modern, responsive landing page for an online hotel app,
+                  built with HTML, CSS, and JavaScript. Designed to showcase
+                  products with clean visuals and a user-friendly layout across
+                  all devices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a
+          href="https://geright.netlify.app/" target="_blank"
+          class="card group relative block bg-black rounded-lg overflow-hidden w-full mx-auto"
+        >
+          <img
+            alt="restaurant-app"
+            src="./assets/images/img/restaurant-app.jpg"
+            class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+          />
+          <div class="relative p-4 sm:p-6 lg:p-8">
+            <ul class="flex flex-row items-start">
+              <li>
+                <img
+                  src="./assets/images/img/logo-html5.png"
+                  alt="html"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/tailwindcss.png"
+                  alt="css"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-js.png "
+                  alt="JavaScript"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-react.png "
+                  alt="react-vite"
+                  class="w-8"
+                />
+              </li>
+            </ul>
+            <p class="text-xl font-bold text-indigo-600 sm:text-2xl">
+              Restaurant App
+            </p>
+            <div class="mt-32 sm:mt-48 lg:mt-64">
+              <div
+                class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+              >
+                <p class="text-sm text-white tracking-wider">
+                  A modern, responsive landing page built with HTML, Tailwind
+                  CSS, JavaScript, and React (Vite), featuring a sleek UI/UX
+                  design, fast performance, and seamless responsiveness across
+                  all devices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 4 (Duplicate or new content) -->
+        <a
+          href="https://moviecraft.netlify.app/" target="_blank"
+          class="card group relative block bg-black rounded-lg overflow-hidden w-full mx-auto"
+        >
+          <img
+            alt="movie-app"
+            src="./assets/images/img/movie-app.jpg"
+            class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+          />
+          <div class="relative p-4 sm:p-6 lg:p-8">
+            <ul class="flex flex-row items-start">
+              <li>
+                <img
+                  src="./assets/images/img/logo-html5.png"
+                  alt="html"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/tailwindcss.png"
+                  alt="css"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-js.png "
+                  alt="JavaScript"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-react.png "
+                  alt="react-vite"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/appwrite.png "
+                  alt="appwrite"
+                  class="w-8"
+                />
+              </li>
+            </ul>
+            <p class="text-xl font-bold text-indigo-600 sm:text-2xl">
+              Movie App
+            </p>
+            <div class="mt-32 sm:mt-48 lg:mt-64">
+              <div
+                class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+              >
+                <p class="text-sm text-white tracking-wider">
+                  A responsive movie app landing page built with HTML, Tailwind
+                  CSS, JavaScript, React (Vite), and Appwrite. It fetches movie
+                  data from an external API, applies SEO best practices for
+                  better visibility, and ensures fast performance with secure
+                  backend integration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 5 -->
+        <a
+          href="https://jayrmira.netlify.app/" target="_blank"
+          class="card group relative block bg-black rounded-lg overflow-hidden w-full mx-auto"
+        >
+          <img
+            alt="portfolio-site"
+            src="./assets/images/img/wedding-app.jpg"
+            class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+          />
+          <div class="relative p-4 sm:p-6 lg:p-8">
+            <ul class="flex flex-row items-start">
+              <li>
+                <img
+                  src="./assets/images/img/logo-html5.png"
+                  alt="html"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-bs.png"
+                  alt="bootstrap"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-js.png "
+                  alt="JavaScript"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-react.png "
+                  alt="react-vite"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-nodejs.png "
+                  alt="nodejs"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-ejs.png "
+                  alt="ejs"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-mongodb.png "
+                  alt="mongodb"
+                  class="w-8"
+                />
+              </li>
+            </ul>
+            <p class="text-xl font-bold text-indigo-600 sm:text-2xl">
+              Wedding Guest Mngt App
+            </p>
+            <div class="mt-32 sm:mt-48 lg:mt-64">
+              <div
+                class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+              >
+                <p class="text-sm text-white tracking-wider">
+                  A full-stack web application built with React (Vite),
+                  Bootstrap, Node.js, Express, and MongoDB. It features guest
+                  RSVP tracking, secure admin authentication, and a dashboard to
+                  manage guest information efficiently.
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 6 -->
+        <a
+          href="#"
+          class="card group relative block bg-black rounded-lg overflow-hidden w-full mx-auto"
+        >
+          <img
+            alt="grocery-app"
+            src="./assets/images/img/grocery-app.jpg"
+            class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+          />
+          <div class="relative p-4 sm:p-6 lg:p-8">
+            <ul class="flex flex-row items-start">
+              <li>
+                <img
+                  src="./assets/images/img/logo-html5.png"
+                  alt="html"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/tailwindcss.png"
+                  alt="tailwindcss"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-js.png "
+                  alt="JavaScript"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-react.png "
+                  alt="react-vite"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-nodejs.png "
+                  alt="nodejs"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-ejs.png "
+                  alt="ejs"
+                  class="w-8"
+                />
+              </li>
+              <li>
+                <img
+                  src="./assets/images/img/logo-mongodb.png "
+                  alt="mongodb"
+                  class="w-8"
+                />
+              </li>
+            </ul>
+            <p class="text-xl font-bold text-indigo-600 sm:text-2xl">
+              Grocery App - Under Development
+            </p>
+            <div class="mt-32 sm:mt-48 lg:mt-64">
+              <div
+                class="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+              >
+                <p class="text-sm text-white pb-4 tracking-wider">
+                  A full-stack web application built with React (Vite),
+                  TailwindCSS, Node.js, Express, and MongoDB. It allows users to
+                  browse, add, and manage grocery items, with dynamic UI and
+                  real-time database integration for a smooth shopping
+                  experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- alert section -->
+    <div
+      id="success-alert"
+      class="fixed top-5 right-5 z-50 bg-white inline-flex space-x-3 p-3 text-sm rounded border border-gray-300/60 hidden"
+    >
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16.5 8.31V9a7.5 7.5 0 1 1-4.447-6.855M16.5 3 9 10.508l-2.25-2.25"
+          stroke="#22C55E"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <div>
+        <h3 class="text-gray-700 font-medium">Successfully saved!</h3>
+        <p class="text-gray-500">Cheers! We appreciate you reaching out.We'll get back to you soon.</p>
+      </div>
+      <button
+        type="button"
+        id="close-alert"
+        aria-label="close"
+        class="inline-flex active:scale-95 transition"
+      >
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            y="12.532"
+            width="17.498"
+            height="2.1"
+            rx="1.05"
+            transform="rotate(-45.74 0 12.532)"
+            fill="#7d838b"
+            fill-opacity=".7"
+          />
+          <rect
+            x="12.531"
+            y="13.914"
+            width="17.498"
+            height="2.1"
+            rx="1.05"
+            transform="rotate(-135.74 12.531 13.914)"
+            fill="#7d838b"
+            fill-opacity=".7"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- contact section -->
+    <div id="contact">
+      <form
+        id="contact-form"
+        class="flex flex-col items-center text-sm text-slate-800"
+      >
+        <p
+          class="text-xs bg-indigo-200 text-indigo-600 font-medium px-3 py-1 rounded-full"
+        >
+          Let's Talk
+        </p>
+        <h1
+          class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl p-4"
+        >
+          Let's Get in Touch
+        </h1>
+        <p class="max-md:text-sm text-gray-500 pb-10 text-center">
+          Or just reach out manually to us at
+          <a href="#" class="text-indigo-600 hover:underline"
+            >mark.devz.08@gmail.com</a
+          >
+        </p>
+
+        <div class="max-w-96 w-full px-4">
+          <label for="name" class="font-medium">Full Name</label>
+          <div
+            class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-indigo-400 transition-all overflow-hidden"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.311 16.406a9.64 9.64 0 0 0-4.748-4.158 5.938 5.938 0 1 0-7.125 0 9.64 9.64 0 0 0-4.749 4.158.937.937 0 1 0 1.623.938c1.416-2.447 3.916-3.906 6.688-3.906 2.773 0 5.273 1.46 6.689 3.906a.938.938 0 0 0 1.622-.938M5.938 7.5a4.063 4.063 0 1 1 8.125 0 4.063 4.063 0 0 1-8.125 0"
+                fill="#475569"
+              />
+            </svg>
+            <input
+              type="text"
+              name="name"
+              class="h-full px-2 w-full outline-none bg-transparent"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <label for="email-address" class="font-medium mt-4"
+            >Email Address</label
+          >
+          <div
+            class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-indigo-400 transition-all overflow-hidden"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.5 3.438h-15a.937.937 0 0 0-.937.937V15a1.563 1.563 0 0 0 1.562 1.563h13.75A1.563 1.563 0 0 0 18.438 15V4.375a.94.94 0 0 0-.938-.937m-2.41 1.874L10 9.979 4.91 5.313zM3.438 14.688v-8.18l5.928 5.434a.937.937 0 0 0 1.268 0l5.929-5.435v8.182z"
+                fill="#475569"
+              />
+            </svg>
+            <input
+              type="email"
+              name="email"
+              class="h-full px-2 w-full outline-none bg-transparent"
+              placeholder="Enter your email address"
+              required
+            />
+          </div>
+
+          <label for="message" class="font-medium mt-4">Message</label>
+          <textarea
+            name="message"
+            rows="4"
+            class="w-full mt-2 p-2 bg-transparent border border-slate-300 rounded-lg resize-none outline-none focus:ring-2 focus-within:ring-indigo-400 transition-all"
+            placeholder="Enter your message"
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            class="flex items-center justify-center gap-1 mt-5 bg-indigo-500 hover:bg-indigo-600 text-white py-2.5 w-full rounded-full transition"
+          >
+            Submit
+            
+            </svg>
+          </button>
+          <p id="form-status" class="text-sm text-gray-600 mt-3"></p>
+        </div>
+      </form>
+    </div>
+    <!-- footer section -->
+    <footer class="ml-4 md:ml-0 mt-32 md:px-16 lg:px-24 xl:px-32 pt-8 w-full text-gray-500">
+      <div
+        class="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6"
+      >
+        <div class="md:max-w-96">
+          <h1 class="text-2xl text-indigo-600 font-bold">mark.devz</h1>
+          <p class="mt-4 text-sm tracking-wider">
+            Helping businesses and individuals bring their vision to life
+            through personalized web development, combining years of experience
+            with a commitment to quality and innovation.
+          </p>
+          <!-- social media icon section -->
+          <div class="social-buttons">
+            <a href="https://github.com/MasterByteMe/" target="_blank" class="social-button github">
+              <svg class="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19"><path d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z"></path></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/mark-anthony-ruiz-5026b1235/" target="_blank" class="social-button linkedin">
+                  <svg viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Icons" stroke="none" stroke-width="1">
+                      <g transform="translate(-702.000000, -265.000000)">
+                          <path d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z" id="LinkedIn">
+              </path>
+                      </g>
+                  </g>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/Mr.Ruiz24" target="_blank" class="social-button facebook">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 310 310" xml:space="preserve">
+          <g id="XMLID_834_">
+            <path id="XMLID_835_" d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
+              c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
+              V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
+              C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
+              c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"></path>
+          </g>
+          </svg>
+            </a>
+            <a href="https://www.instagram.com/mark.devz/" target="_blank" class="social-button instagram">
+              <svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Page-1" stroke="none" stroke-width="1">
+                  <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)">
+                      <g id="icons" transform="translate(56.000000, 160.000000)">
+                          <path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#167]">
+
+          </path>
+                      </g>
+                  </g>
+              </g>
+          </svg>
+            </a>
+          </div>
+        </div>
+        
+
+        <div class="flex-1 flex items-start md:justify-end gap-20">
+          <div>
+            <h2 class="font-semibold mb-5 text-gray-800">Company</h2>
+            <ul class="text-sm space-y-2">
+              <li><a href="#" class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition">Home</a></li>
+              <li><a href="#about" class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition">About</a></li>
+              <li><a href="#services" class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition">Services</a></li>
+              <li><a href="#projects" class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition">Projects</a></li>
+              <li><a href="#contact" class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="font-semibold mb-5 text-gray-800">Get in touch</h2>
+            <div class="text-sm space-y-2">
+              <div class="flex items-center gap-x-2">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <p>+63 992-794-4729</p>
+              </div>
+              <div class="flex items-center gap-x-2">
+                <i class="fa-solid fa-envelope"></i>
+                <p>mark.devz.08@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="pt-4 text-center text-xs md:text-sm pb-5">
+        Copyright <span id="year"></span> © made with ❤️ by mark.devz. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
