@@ -1,3 +1,46 @@
+/* <============================== light dark theme button ==============================> */
+// theme-toggle.js
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("input");
+  const root = document.documentElement;
+
+  // Reverse logic:
+  // Checkbox checked = light mode
+  // Checkbox unchecked = dark mode
+
+  // Apply theme from saved preference
+  if (localStorage.theme === "dark") {
+    root.classList.add("dark");
+    toggle.checked = false;
+  } else if (localStorage.theme === "light") {
+    root.classList.remove("dark");
+    toggle.checked = true;
+  } else {
+    // Default: match system preference
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      root.classList.add("dark");
+      toggle.checked = false;
+    } else {
+      root.classList.remove("dark");
+      toggle.checked = true;
+    }
+  }
+
+  // Toggle theme when input changes
+  toggle.addEventListener("change", function () {
+    if (this.checked) {
+      // Light mode
+      root.classList.remove("dark");
+      localStorage.theme = "light";
+    } else {
+      // Dark mode
+      root.classList.add("dark");
+      localStorage.theme = "dark";
+    }
+  });
+});
+
 /* <============================== hamburger menu ==============================> */
 
 const toggleBtn = document.getElementById("menu-toggle");

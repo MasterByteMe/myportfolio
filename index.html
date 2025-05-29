@@ -7,8 +7,14 @@
 
     <!-- TailwindCSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      }
+    </script>
 
     <link rel="stylesheet" href="assets/css/styles.css">
+ 
 
     <!-- fontawesome link CDN -->
     <link
@@ -21,11 +27,11 @@
       <!-- Navbar -->
       <nav
         id="home"
-        class="transition-transform duration-300 transform show-nav flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 font-medium z-50 bg-white/80 backdrop-blur-md"
+        class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white border-b border-gray-300 dark:border-gray-700 transition-transform duration-300 transform show-nav flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 font-medium z-50 bg-white/80 backdrop-blur-md"
       >
         <!-- Logo -->
          <a href="#">
-        <h1 class="text-2xl text-indigo-500 hover:text-indigo-500 font-bold cursor-pointer">mark.devz</h1>
+        <h1 class="dark:bg-gray-900 dark:text-white text-2xl text-indigo-500 hover:text-indigo-500 font-bold cursor-pointer">mark.devz</h1>
         </a>
 
         <!-- Hamburger (Mobile) -->
@@ -50,7 +56,7 @@
         <!-- Nav Links -->
         <ul
           id="nav-menu"
-          class="hidden max-md:absolute top-full left-0 max-md:w-full md:flex md:items-center gap-8 max-md:bg-white max-md:shadow-md max-md:px-8 max-md:py-4 flex-col md:flex-row z-50"
+          class="max-md:bg-white dark:max-md:bg-gray-900 hidden max-md:absolute top-full left-0 max-md:w-full md:flex md:items-center gap-8 max-md:bg-white max-md:shadow-md max-md:px-8 max-md:py-4 flex-col md:flex-row z-50"
         >
           <li>
             <a
@@ -90,7 +96,7 @@
 
           <!-- Contact button for mobile -->
           <li class="block md:hidden mt-4">
-            <button class="group flex items-center gap-2">
+            <button class="group flex items-center gap-2 pt-2">
               Let's Talk
               <svg
                 class="group-hover:translate-x-1 transition pt-0.5"
@@ -110,11 +116,80 @@
               </svg>
             </button>
           </li>
-        </ul>
+        </ul>  
 
         <!-- Contact button for desktop -->
 
         <div class="hidden md:flex items-center gap-4">
+          <label class="switch">
+            <input id="input" type="checkbox" checked="darkTheme" />
+            <div class="slider round">
+              <div class="stars">
+                <svg id="star-1" class="star" viewBox="0 0 20 20">
+                  <path
+                    d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+                  ></path>
+                </svg>
+                <svg id="star-2" class="star" viewBox="0 0 20 20">
+                  <path
+                    d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+                  ></path>
+                </svg>
+                <svg id="star-3" class="star" viewBox="0 0 20 20">
+                  <path
+                    d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+                  ></path>
+                </svg>
+                <svg id="star-4" class="star" viewBox="0 0 20 20">
+                  <path
+                    d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="sun-moon">
+                <svg id="moon-dot-1" class="moon-dot" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+                <svg id="moon-dot-2" class="moon-dot" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+                <svg id="moon-dot-3" class="moon-dot" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+                <svg id="light-ray-1" class="light-ray" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+                <svg id="light-ray-2" class="light-ray" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+                <svg id="light-ray-3" class="light-ray" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+
+                <svg id="cloud-1" class="cloud-dark" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+                <svg id="cloud-2" class="cloud-dark" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+                <svg id="cloud-3" class="cloud-dark" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+                <svg id="cloud-4" class="cloud-light" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+                <svg id="cloud-5" class="cloud-light" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+                <svg id="cloud-6" class="cloud-light" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="50"></circle>
+                </svg>
+              </div>
+              
+            </div>
+          </label>
+
+
           <a href="#contact">
           <button class="group hidden md:flex items-center gap-2">
             Let's Talk
@@ -142,7 +217,7 @@
 
     <!-- Hero Section -->
     <div
-      class="h-[580px] flex flex-col items-center justify-center px-4 text-center relative"
+      class="dark:bg-gray-900 text-gray-800 dark:text-white h-[580px] flex flex-col items-center justify-center px-4 text-center relative"
     >
       <img
         src="./assets/images/img/photo.png"
@@ -154,7 +229,7 @@
         Hi I'm Mark Anthony Ruiz 👋
       </h3>
       <h1
-        class="text-4xl sm:text-5xl md:text-6xl font-bold max-w-4xl text-gray-800"
+        class="dark:bg-gray-900 text-gray-800 dark:text-white text-4xl sm:text-5xl md:text-6xl font-bold max-w-4xl text-gray-800"
       >
         Full Stack Web Developer based in PH.
       </h1>
@@ -195,21 +270,21 @@
     </div>
 
     <!-- About Me Section -->
-    <div id="about" class="overflow-hidden bg-white py-24 sm:py-32">
+    <div id="about" class="dark:bg-gray-900 text-gray-800 dark:text-white overflow-hidden bg-white py-24 sm:py-32">
       <div class="items-center justify-center text-center pb-10">
         <h1
-          class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+          class="dark:bg-gray-900 dark:text-white text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
         >
           About Me
         </h1>
       </div>
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div
-          class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+          class="dark:bg-gray-900 dark:text-white mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
         >
           <div class="lg:pt-4 lg:pr-8">
             <div class="lg:max-w-lg">
-              <p class="text-lg/8 text-gray-600">
+              <p class="dark:bg-gray-900 dark:text-white text-lg/8 text-gray-600">
                 Hi, I'm Mark Anthony — a self-taught Full Stack Developer driven by curiosity, creativity, and a genuine passion for building things that work beautifully. My journey into tech began with Udemy courses and YouTube tutorials, and over time, I’ve gained strong hands-on experience in both front-end and back-end technologies.
 
                 Before transitioning into web development, I worked for eight years as an Admin/Receiver at Alshaya Group in Doha, Qatar, and also gained valuable experience in customer service. These roles taught me the importance of organization, communication, and delivering results — skills I now bring to every development project I undertake.
@@ -219,24 +294,24 @@
               <dl
                 class="mt-4 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none"
               >
-                <div class="relative pl-9">
-                  <dt class="inline font-semibold text-gray-900">
+                <div class="dark:bg-gray-900 dark:text-white relative pl-9">
+                  <dt class="dark:bg-gray-900 dark:text-white inline font-semibold text-gray-900">
                     <i
                       class="absolute top-1 left-1 size-5 text-indigo-600 fa-solid fa-graduation-cap"
                     ></i>
 
                     Education
                   </dt>
-                  <dd>Bachelor of Science in Information Technology</dd>
+                  <dd class="dark:bg-gray-900 dark:text-white">Bachelor of Science in Information Technology</dd>
                 </div>
                 <div class="relative pl-9">
-                  <dt class="inline font-semibold text-gray-900">
+                  <dt class="dark:bg-gray-900 dark:text-white inline font-semibold text-gray-900">
                     <i
                       class="absolute top-1 left-1 size-5 text-indigo-600 fa-solid fa-gear"
                     ></i>
                     Skills
                   </dt>
-                  <dd>
+                  <dd class="dark:bg-gray-900 dark:text-white">
                     Adaptability, Leadership, Communication, Problem-Solving,
                     Critical Thinking, Collaboration, Inventory Management
                   </dd>
@@ -255,18 +330,18 @@
       </div>
     </div>
 
-    <div class="flex flex-col items-center justify-center text-center">
+    <div class="dark:bg-gray-900 dark:text-white flex flex-col items-center justify-center text-center">
       <div>
         <h1
-          class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+          class="dark:bg-gray-900 dark:text-white text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
         >
           The Tech I Use to Build Cool Stuff
         </h1>
       </div>
 
-      <div class="mt-10">
+      <div class="dark:bg-gray-900 dark:text-white mt-10">
         <p
-          class="text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-2xl pb-4"
+          class="dark:bg-gray-900 dark:text-white text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-2xl pb-4"
         >
           Front-End
         </p>
@@ -317,7 +392,7 @@
       <!-- Back End Section -->
       <div class="mt-10">
         <p
-          class="text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-2xl pb-4"
+          class="dark:bg-gray-900 dark:text-white text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-2xl pb-4"
         >
           Back-End
         </p>
@@ -364,7 +439,7 @@
       <!-- Other Tools Section -->
       <div class="mt-10">
         <p
-          class="text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-2xl pb-4"
+          class="dark:bg-gray-900 dark:text-white text-2xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-2xl pb-4"
         >
           Other Tools
         </p>
@@ -416,10 +491,10 @@
     <!-- services section -->
     <div
       id="services"
-      class="flex flex-col justify-center items-center min-h-screen my-24 px-4"
+      class="dark:bg-gray-900 flex flex-col justify-center items-center min-h-screen py-24 px-4"
     >
       <h1
-        class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl pb-10"
+        class="dark:text-white text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl pb-10"
       >
         Services
       </h1>
@@ -504,10 +579,10 @@
     <!-- Projects Section -->
     <div
       id="projects"
-      class="flex flex-col justify-center items-center min-h-screen my-32 px-4"
+      class="dark:bg-gray-900 dark:text-white flex flex-col justify-center items-center min-h-screen py-32 px-4"
     >
       <h1
-        class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl pb-10"
+        class="dark:text-white text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl pb-10"
       >
         My Latest Work
       </h1>
@@ -976,7 +1051,7 @@
     <div id="contact">
       <form
         id="contact-form"
-        class="flex flex-col items-center text-sm text-slate-800"
+        class="dark:bg-gray-900 dark:text-white flex flex-col items-center text-sm text-slate-800"
       >
         <p
           class="text-xs bg-indigo-200 text-indigo-600 font-medium px-3 py-1 rounded-full"
@@ -984,18 +1059,18 @@
           Let's Talk
         </p>
         <h1
-          class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl p-4"
+          class="dark:text-white text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl p-4"
         >
           Let's Get in Touch
         </h1>
-        <p class="max-md:text-sm text-gray-500 pb-10 text-center">
+        <p class="dark:text-white max-md:text-sm text-gray-500 pb-10 text-center">
           Or just reach out manually to us at
           <a href="#" class="text-indigo-600 hover:underline"
             >mark.devz.08@gmail.com</a
           >
         </p>
 
-        <div class="max-w-96 w-full px-4">
+        <div class="dark:bg-gray-900 dark:text-white max-w-96 w-full px-4">
           <label for="name" class="font-medium">Full Name</label>
           <div
             class="flex items-center mt-2 mb-4 h-10 pl-3 border border-slate-300 rounded-full focus-within:ring-2 focus-within:ring-indigo-400 transition-all overflow-hidden"
@@ -1070,12 +1145,12 @@
       </form>
     </div>
     <!-- footer section -->
-    <footer class="ml-4 md:ml-0 mt-32 md:px-16 lg:px-24 xl:px-32 pt-8 w-full text-gray-500">
+    <footer class="dark:bg-gray-900 dark:text-white ml-4 md:ml-0 pt-32 md:px-16 lg:px-24 xl:px-32 pt-8 w-full text-gray-500">
       <div
         class="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-500/30 pb-6"
       >
         <div class="md:max-w-96">
-          <h1 class="text-2xl text-indigo-600 font-bold">mark.devz</h1>
+          <h1 class="dark:bg-gray-900 dark:text-white text-2xl text-indigo-600 font-bold">mark.devz</h1>
           <p class="mt-4 text-sm tracking-wider">
             Helping businesses and individuals bring their vision to life
             through personalized web development, combining years of experience
@@ -1124,10 +1199,10 @@
         </div>
         
 
-        <div class="flex-1 flex items-start md:justify-end gap-20">
+        <div class="dark:text-white flex-1 flex items-start md:justify-end gap-20">
           <div>
-            <h2 class="font-semibold mb-5 text-gray-800">Company</h2>
-            <ul class="text-sm space-y-2">
+            <h2 class="dark:text-white font-semibold mb-5 text-gray-800">Company</h2>
+            <ul class="dark:text-white text-sm space-y-2">
               <li><a href="#" class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition">Home</a></li>
               <li><a href="#about" class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition">About</a></li>
               <li><a href="#services" class="hover:text-indigo-500 md:hover:underline underline-offset-8 transition">Services</a></li>
@@ -1136,7 +1211,7 @@
             </ul>
           </div>
           <div>
-            <h2 class="font-semibold mb-5 text-gray-800">Get in touch</h2>
+            <h2 class="dark:text-white font-semibold mb-5 text-gray-800">Get in touch</h2>
             <div class="text-sm space-y-2">
               <div class="flex items-center gap-x-2">
                 <i class="fa-solid fa-mobile-screen-button"></i>
